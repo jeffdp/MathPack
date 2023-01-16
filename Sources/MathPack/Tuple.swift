@@ -73,6 +73,7 @@ public struct Tuple: Equatable {
         Vector(0, 0, 0)
     }
 
+    /// Return an origin point of [0, 0, 0]
     public static func origin() -> Tuple {
         Point(0, 0, 0)
     }
@@ -170,6 +171,12 @@ public struct Tuple: Equatable {
     }
 }
 
+/// Cretes a Point tuple, with w = 1.0.
+/// - Parameters:
+///   - x: x component
+///   - y: y component
+///   - z: z component
+/// - Returns: a tuple representing `[x, y, z, 1.0]`
 public func Point(_ x: Double, _ y: Double, _ z: Double) -> Tuple {
     Tuple(x, y, z, 1.0)
 }
@@ -179,11 +186,17 @@ public func Point(_ x: Double, _ y: Double, _ z: Double) -> Tuple {
 ///   - x: x component
 ///   - y: y component
 ///   - z: z component
-/// - Returns: a tuple representing `[x, y, z]`
+/// - Returns: a tuple representing `[x, y, z, 0.0]`
 public func Vector(_ x: Double, _ y: Double, _ z: Double) -> Tuple {
     Tuple(x, y, z, 0.0)
 }
 
+/// Creates a Color tuple
+/// - Parameters:
+///   - r: Red value in [0...1]
+///   - g: Green value in [0...1]
+///   - b: Blue value in [0...1]
+/// - Returns: an RGB color with alpha of 1.0
 public func Color(_ r: Double, _ g: Double, _ b: Double) -> Tuple {
     Tuple(r, g, b, a: 1.0)
 }
