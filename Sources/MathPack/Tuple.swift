@@ -7,6 +7,8 @@
 
 import Foundation
 
+
+/// A class for creating points, vectors, and colors.
 public struct Tuple: Equatable {
     private static let epsilon = 0.00001
 
@@ -172,6 +174,12 @@ public func Point(_ x: Double, _ y: Double, _ z: Double) -> Tuple {
     Tuple(x, y, z, 1.0)
 }
 
+/// Creates a Vector tuple, with w = 0.0.
+/// - Parameters:
+///   - x: x component
+///   - y: y component
+///   - z: z component
+/// - Returns: a tuple representing `[x, y, z]`
 public func Vector(_ x: Double, _ y: Double, _ z: Double) -> Tuple {
     Tuple(x, y, z, 0.0)
 }
